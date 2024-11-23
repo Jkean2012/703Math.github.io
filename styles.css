@@ -1,103 +1,122 @@
-/* General styles */
+/* Basic page styles */
 body {
-    background-color: #0099cc;
-    color: white;
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* Banner navigation bar */
+/* Header styles */
 header {
-    background-color: #005f73;
-    width: 100%;
-    padding: 10px 20px;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
-    display: flex;
-    justify-content: space-between; /* Space out items */
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    background-color: #1E90FF;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Site name styling */
 header h1 {
     margin: 0;
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
-    text-align: left;
 }
 
-/* Navigation links container */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
 }
 
-/* Each navigation item */
 nav ul li {
-    margin-left: 20px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
-/* Link styling */
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 8px 15px;
-    display: inline-block;
 }
 
-/* Link hover effect */
-nav ul li a:hover {
-    background-color: #003d4d;
+/* Game Card styles */
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.game-card {
+    text-align: center;
+    width: 250px;
+}
+
+.game-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.game-btn img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.game-btn span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.game-btn span:hover {
+    color: #1E90FF;
+}
+
+/* Play button styles */
+.play-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #1E90FF;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
+    text-align: center;
+}
+
+.play-btn:hover {
+    background-color: #00BFFF;
+}
+
+/* More Options Section */
+.more-options {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.more-options h3 {
+    margin-bottom: 10px;
+}
+
+.more-options a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+.more-options a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    background-color: #005f73;
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Main content */
-main {
-    margin-top: 70px; /* Add margin to avoid content being hidden behind the banner */
-}
-
-/* Partners section */
-.partners {
-    padding: 20px;
-    text-align: center;
-}
-
-.partners h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.partners ul {
-    list-style: none;
-    padding: 0;
-}
-
-.partners ul li {
-    margin: 10px 0;
-}
-
-.partners ul li a {
-    color: #ffcc00;
-    text-decoration: none;
-}
-
-.partners ul li a:hover {
-    text-decoration: underline;
-}

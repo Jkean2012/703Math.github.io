@@ -5,36 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unblocked Games</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // Double-tap detection function
-        let tapCount = 0;
-        const maxTaps = 2;
-        const tapTimeout = 500; // time window for double tap detection (in milliseconds)
-        let lastTapTime = 0;
-
-        // URL of the site to be launched
-        const targetUrl = "https://yourwebsite.com"; // Change this to the URL you want to open
-
-        // Function to handle the double-tap action
-        function handleDoubleTap() {
-            const currentTime = new Date().getTime();
-
-            if (currentTime - lastTapTime < tapTimeout) {
-                tapCount++;
-
-                // Check if the user has tapped twice
-                if (tapCount === maxTaps) {
-                    window.open(targetUrl, "_blank");  // Opens the URL in a new tab
-                    console.log("Double tap detected! Launching URL in new tab...");
-                    tapCount = 0; // Reset tap count after double tap
-                }
-            } else {
-                tapCount = 1; // Reset tap count if the time between taps is too long
-            }
-
-            lastTapTime = currentTime;
+    <style>
+        /* Centering the button above the proxy section */
+        #fullscreen {
+            text-align: center;
+            margin-top: 30px; /* Adds space between the header and the button */
         }
-    </script>
+
+        /* Ensures the button looks good */
+        #fullscreen button {
+            background-color: #ff9900;
+            color: #fff;
+            border: 1px solid #ff9900;
+            font-size: 26px;
+            width: 80%; /* Adjusts the width of the button */
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        #fullscreen button:hover {
+            background-color: #ff7f00;
+        }
+
+        /* Centering the iframe below */
+        #proxy {
+            text-align: center;
+            margin-top: 20px; /* Adds space between the button and iframe */
+        }
+
+        iframe {
+            border: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -48,14 +51,27 @@
     </header>
 
     <main>
+        <!-- Fullscreen Play Button Section (Centered Above Proxy) -->
+        <section id="fullscreen">
+            <button onclick="openGame()">Play in Fullscreen</button>
+            <script>
+                function openGame() {
+                    var win = window.open();
+                    var url = "URL BRUH";  // Replace with the actual game URL
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.width = "100%";
+                    iframe.style.height = "100%";
+                    iframe.style.border = "none";
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                }
+            </script>
+        </section>
+
+        <!-- Proxy Section (Iframe for games) -->
         <section id="proxy">
             <h2>Access Games via Proxy</h2>
             <iframe src="https://some-unblocked-site.com" width="100%" height="500"></iframe>
-        </section>
-
-        <!-- Double Tap Button -->
-        <section id="cloaking">
-            <button id="cloakButton" onclick="handleDoubleTap()">Double Tap to Cloak</button>
         </section>
     </main>
 

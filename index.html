@@ -3,12 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>703 Smart</title>
+    <title>Unblocked Games</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Double-tap detection function
+        let tapCount = 0;
+        const maxTaps = 2;
+        const tapTimeout = 500; // time window for double tap detection (in milliseconds)
+        let lastTapTime = 0;
+
+        // URL of the site to be launched
+        const targetUrl = "https://yourwebsite.com"; // Change this to the URL you want to open
+
+        // Function to handle the double-tap action
+        function handleDoubleTap() {
+            const currentTime = new Date().getTime();
+
+            if (currentTime - lastTapTime < tapTimeout) {
+                tapCount++;
+
+                // Check if the user has tapped twice
+                if (tapCount === maxTaps) {
+                    window.open(targetUrl, "_blank");  // Opens the URL in a new tab
+                    console.log("Double tap detected! Launching URL in new tab...");
+                    tapCount = 0; // Reset tap count after double tap
+                }
+            } else {
+                tapCount = 1; // Reset tap count if the time between taps is too long
+            }
+
+            lastTapTime = currentTime;
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>703 Smart</h1>
+        <h1>Unblocked Games</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,11 +52,15 @@
             <h2>Access Games via Proxy</h2>
             <iframe src="https://some-unblocked-site.com" width="100%" height="500"></iframe>
         </section>
+
+        <!-- Double Tap Button -->
+        <section id="cloaking">
+            <button id="cloakButton" onclick="handleDoubleTap()">Double Tap to Cloak</button>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 703 Smart</p>
+        <p>&copy; 2024 Unblocked Games</p>
     </footer>
 </body>
 </html>
-

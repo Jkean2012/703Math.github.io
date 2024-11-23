@@ -5,39 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unblocked Games</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Centering the button above the proxy section */
-        #fullscreen {
-            text-align: center;
-            margin-top: 30px; /* Adds space between the header and the button */
-        }
-
-        /* Ensures the button looks good */
-        #fullscreen button {
-            background-color: #ff9900;
-            color: #fff;
-            border: 1px solid #ff9900;
-            font-size: 26px;
-            width: 80%; /* Adjusts the width of the button */
-            cursor: pointer;
-            border-radius: 10px;
-            padding: 15px;
-        }
-
-        #fullscreen button:hover {
-            background-color: #ff7f00;
-        }
-
-        /* Centering the iframe below */
-        #proxy {
-            text-align: center;
-            margin-top: 20px; /* Adds space between the button and iframe */
-        }
-
-        iframe {
-            border: none;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -51,24 +18,6 @@
     </header>
 
     <main>
-        <!-- Fullscreen Play Button Section (Centered Above Proxy) -->
-        <section id="fullscreen">
-            <button onclick="openGame()">Activate Website Cloaking</button>
-            <script>
-                function openGame() {
-                    var win = window.open();
-                    var url = "https://jkean2012.github.io/703Smart/";  // Replace with the actual game URL
-                    var iframe = win.document.createElement('iframe');
-                    iframe.style.width = "100%";
-                    iframe.style.height = "100%";
-                    iframe.style.border = "none";
-                    iframe.src = url;
-                    win.document.body.appendChild(iframe);
-                }
-            </script>
-        </section>
-
-        <!-- Proxy Section (Iframe for games) -->
         <section id="proxy">
             <h2>Access Games via Proxy</h2>
             <iframe src="https://some-unblocked-site.com" width="100%" height="500"></iframe>
@@ -76,7 +25,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Unblocked Games</p>
+        <p>&copy; 703 Smart</p>
     </footer>
 </body>
 </html>
